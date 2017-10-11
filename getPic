@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+import requests
+import os
+cookies={'JSESSIONID':''}
+imgUrl = u"http://xg.tju.edu.cn/sms/xsjbxxgl/xszpxx!viewxszp.action?xh="
+for studentId in range(3015210001,3015218300):
+    url = imgUrl+str(studentId)
+    r = requests.get(url,cookies=cookies)
+    with open('D:/pic/'+str(studentId)+'.jpg','wb') as file:
+        file.write(r.content)
+    print str(studentId)+'finished.'
+    file.close
