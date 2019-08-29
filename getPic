@@ -2,7 +2,7 @@
 import requests
 import os
 cookies={'JSESSIONID':''}
-imgUrl = u"http://xg.tju.edu.cn/sms/xsjbxxgl/xszpxx!viewxszp.action?xh="
+imgUrl = u"http://shell.tju.edu.cn/sms/xsjbxxgl/xszpxx!viewxszp.action?xh="
 for studentId in range(3015210001,3015218300):
     url = imgUrl+str(studentId)
     r = requests.get(url,cookies=cookies)
